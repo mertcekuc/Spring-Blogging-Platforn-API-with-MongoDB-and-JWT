@@ -20,7 +20,7 @@ public class ArticleRepositoryImpl implements ArticleRepository{
 
     @Override
     public void createArticle(Article article) {
-        mongoTemplate.save(article, "articles");
+        mongoTemplate.insert(article, "articles");
     }
 
     @Override
@@ -40,10 +40,6 @@ public class ArticleRepositoryImpl implements ArticleRepository{
         mongoTemplate.save(article, "articles");
     }
 
-    @Override
-    public void deleteArticleBySlug(String slug) {
-        mongoTemplate.remove(Query.query(Criteria.where("slug").is(slug)), Article.class, "articles");
-    }
 
     @Override
     public void deleteArticleById(String id) {

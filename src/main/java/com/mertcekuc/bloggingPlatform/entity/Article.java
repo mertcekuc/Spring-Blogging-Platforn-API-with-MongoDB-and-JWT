@@ -82,6 +82,7 @@ public class Article {
         this.lastModified = lastModified;
     }
 
+
     public String getSlug() {
         return slug;
     }

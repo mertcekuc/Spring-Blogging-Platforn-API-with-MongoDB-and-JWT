@@ -12,7 +12,6 @@ public interface ArticleRepository {
     Article findBySlug(String slug);
     List<Article> findAllArticles();
     void updateArticle(Article article);
-    void deleteArticleBySlug(String slug);
     void deleteArticleById(String id);
     Article findById(String id);
     List<Article> findByAuthor(String author);
