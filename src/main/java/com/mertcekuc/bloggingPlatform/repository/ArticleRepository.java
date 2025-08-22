@@ -1,15 +1,20 @@
 package com.mertcekuc.bloggingPlatform.repository;
 
+import com.mertcekuc.bloggingPlatform.entity.Article;
 import org.springframework.stereotype.Repository;
 
-@Repository
+import java.util.List;
+
+
 public interface ArticleRepository {
 
+    void createArticle(Article article);
+    Article findBySlug(String slug);
+    List<Article> findAllArticles();
+    void updateArticle(Article article);
+    void deleteArticleBySlug(String slug);
+    void deleteArticleById(String id);
+    Article findById(String id);
+    List<Article> findByAuthor(String author);
 
-    // Define methods for CRUD operations on articles
-    // For example:
-    // List<Article> findAll();
-    // Optional<Article> findById(Long id);
-    // Article save(Article article);
-    // void deleteById(Long id);
 }
