@@ -1,4 +1,4 @@
-package service;
+package com.mertcekuc.bloggingPlatform.service;
 
 import com.mertcekuc.bloggingPlatform.entity.Article;
 
