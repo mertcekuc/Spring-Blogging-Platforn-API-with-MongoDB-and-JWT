@@ -19,6 +19,7 @@ public class ArticleServiceImpl implements ArticleService{
 
     @Override
     public void createArticle(Article article) {
+        article.setPublishDate(LocalDateTime.now());
         updateSlug(article);
         articleRepository.createArticle(article);
     }
